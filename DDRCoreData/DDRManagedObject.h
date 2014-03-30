@@ -23,6 +23,8 @@
 
 + (NSArray*)allInstancesWithPredicate:(NSPredicate*)predicate inManagedObjectContext:(NSManagedObjectContext*)context;
 
++ (NSArray*)allInstancesWithPredicate:(NSPredicate*)predicate andSortDescriptors:(NSArray*)sortDescriptors inManagedObjectContext:(NSManagedObjectContext*)context;
+
 + (NSArray*)allInstancesInManagedObjectContext:(NSManagedObjectContext*)context;
 
 

@@ -39,6 +39,19 @@
     return results;
 }
 
++ (NSArray*)allInstancesWithPredicate:(NSPredicate*)predicate andSortDescriptors:(NSArray*)sortDescriptors inManagedObjectContext:(NSManagedObjectContext*)context
+{
+    NSFetchRequest* request = [self fetchRequest];
+    request.predicate = predicate;
+    request.sortDescriptors = sortDescriptors;
+    NSError* error = nil;
+    NSArray* results = [context executeFetchRequest:request error:&error];
+    if (results == nil) {
+        NSLog(@"ERROR loading %@: %@", predicate, error);
+    }
+    return results;
+}
+
 + (NSArray*)allInstancesInManagedObjectContext:(NSManagedObjectContext*)context
 {
     NSArray* results = [self allInstancesWithPredicate:nil inManagedObjectContext:context];
