@@ -48,8 +48,27 @@
 - (void)testInsertionOfPersonObjects
 {
     NSManagedObjectContext *moc = _doc.mainQueueObjectContext;
-    NSArray *items = [DDRPerson allInstancesInManagedObjectContext:moc];
-    XCTAssertEqual([items count], 1, @"[items count] is not 1");
+    NSArray *sorters = @[[NSSortDescriptor sortDescriptorWithKey:@"lastName" ascending:YES], [NSSortDescriptor sortDescriptorWithKey:@"firstName" ascending:YES]];
+
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K=%@", @"firstName", @"Dave"];
+
+    NSArray *items = [DDRPerson allInstancesWithPredicate:predicate andSortDescriptors:sorters inManagedObjectContext:moc];
+    XCTAssertEqual([items count], 2, @"[items count] is not 2");
+
+    DDRPerson *p = [items firstObject];
+    XCTAssertEqual(@"Dave", p.firstName, @"first name is not Dave");
+    XCTAssertEqual(@"Reed", p.lastName, @"last name is not Reed");
+
+    p = [items objectAtIndex:1];
+    XCTAssertEqual(@"Dave", p.firstName, @"first name is not Dave");
+    XCTAssertEqual(@"Smith", p.lastName, @"last name is not Smith");
+
+    items = [DDRPerson allInstancesWithPredicate:nil andSortDescriptors:sorters inManagedObjectContext:moc];
+    XCTAssertEqual([items count], 3, @"[items count] is not 3");
+
+    p = [items lastObject];
+    XCTAssertEqual(@"John", p.firstName, @"first name is not John");
+    XCTAssertEqual(@"Stroeh", p.lastName, @"last name is not Stroeh");
 }
 
 - (void)insertPersonObjects
@@ -58,6 +77,19 @@
     DDRPerson *p = [DDRPerson newInstanceInManagedObjectContext:moc];
     p.firstName = @"Dave";
     p.lastName = @"Reed";
+
+    p = [DDRPerson newInstanceInManagedObjectContext:moc];
+    p.firstName = @"Dave";
+    p.lastName = @"Smith";
+
+    p = [DDRPerson newInstanceInManagedObjectContext:moc];
+    p.firstName = @"John";
+    p.lastName = @"Stroeh";
+
+    NSError *error;
+    [moc save:&error];
+    XCTAssert(error == nil, @"save error: %@\n%@", [error localizedDescription], [error userInfo]);
+
 
 }
 
