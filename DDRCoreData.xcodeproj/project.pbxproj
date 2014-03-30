@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		030376A718E89708008475CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030376A618E89708008475CF /* Foundation.framework */; };
-		030376AC18E89708008475CF /* DDRCoreData.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 030376AB18E89708008475CF /* DDRCoreData.h */; };
-		030376AE18E89708008475CF /* DDRCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376AD18E89708008475CF /* DDRCoreData.m */; };
 		030376B518E89708008475CF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030376B418E89708008475CF /* XCTest.framework */; };
 		030376B618E89708008475CF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030376A618E89708008475CF /* Foundation.framework */; };
 		030376B818E89708008475CF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 030376B718E89708008475CF /* UIKit.framework */; };
 		030376BB18E89708008475CF /* libDDRCoreData.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 030376A318E89708008475CF /* libDDRCoreData.a */; };
 		030376C118E89708008475CF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 030376BF18E89708008475CF /* InfoPlist.strings */; };
 		030376C318E89708008475CF /* DDRCoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376C218E89708008475CF /* DDRCoreDataTests.m */; };
+		030376D018E89783008475CF /* DDRCoreDataDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376CD18E89783008475CF /* DDRCoreDataDocument.m */; };
+		030376D118E89783008475CF /* DDRManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376CF18E89783008475CF /* DDRManagedObject.m */; };
+		030376D418E897AF008475CF /* DDRCoreDataTests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030376D218E897AF008475CF /* DDRCoreDataTests.xcdatamodeld */; };
+		030376D718E897E8008475CF /* DDRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376D618E897E8008475CF /* DDRPerson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +37,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				030376AC18E89708008475CF /* DDRCoreData.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,14 +46,19 @@
 		030376A318E89708008475CF /* libDDRCoreData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDDRCoreData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		030376A618E89708008475CF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		030376AA18E89708008475CF /* DDRCoreData-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DDRCoreData-Prefix.pch"; sourceTree = "<group>"; };
-		030376AB18E89708008475CF /* DDRCoreData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDRCoreData.h; sourceTree = "<group>"; };
-		030376AD18E89708008475CF /* DDRCoreData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDRCoreData.m; sourceTree = "<group>"; };
 		030376B318E89708008475CF /* DDRCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDRCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		030376B418E89708008475CF /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		030376B718E89708008475CF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		030376BE18E89708008475CF /* DDRCoreDataTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DDRCoreDataTests-Info.plist"; sourceTree = "<group>"; };
 		030376C018E89708008475CF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		030376C218E89708008475CF /* DDRCoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDRCoreDataTests.m; sourceTree = "<group>"; };
+		030376CC18E89783008475CF /* DDRCoreDataDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRCoreDataDocument.h; sourceTree = "<group>"; };
+		030376CD18E89783008475CF /* DDRCoreDataDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRCoreDataDocument.m; sourceTree = "<group>"; };
+		030376CE18E89783008475CF /* DDRManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRManagedObject.h; sourceTree = "<group>"; };
+		030376CF18E89783008475CF /* DDRManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRManagedObject.m; sourceTree = "<group>"; };
+		030376D318E897AF008475CF /* DDRCoreDataTests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DDRCoreDataTests.xcdatamodel; sourceTree = "<group>"; };
+		030376D518E897E8008475CF /* DDRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRPerson.h; sourceTree = "<group>"; };
+		030376D618E897E8008475CF /* DDRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRPerson.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +116,10 @@
 		030376A818E89708008475CF /* DDRCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				030376AB18E89708008475CF /* DDRCoreData.h */,
-				030376AD18E89708008475CF /* DDRCoreData.m */,
+				030376CC18E89783008475CF /* DDRCoreDataDocument.h */,
+				030376CD18E89783008475CF /* DDRCoreDataDocument.m */,
+				030376CE18E89783008475CF /* DDRManagedObject.h */,
+				030376CF18E89783008475CF /* DDRManagedObject.m */,
 				030376A918E89708008475CF /* Supporting Files */,
 			);
 			path = DDRCoreData;
@@ -130,6 +138,9 @@
 			children = (
 				030376C218E89708008475CF /* DDRCoreDataTests.m */,
 				030376BD18E89708008475CF /* Supporting Files */,
+				030376D218E897AF008475CF /* DDRCoreDataTests.xcdatamodeld */,
+				030376D518E897E8008475CF /* DDRPerson.h */,
+				030376D618E897E8008475CF /* DDRPerson.m */,
 			);
 			path = DDRCoreDataTests;
 			sourceTree = "<group>";
@@ -224,7 +235,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030376AE18E89708008475CF /* DDRCoreData.m in Sources */,
+				030376D018E89783008475CF /* DDRCoreDataDocument.m in Sources */,
+				030376D118E89783008475CF /* DDRManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +244,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030376D718E897E8008475CF /* DDRPerson.m in Sources */,
 				030376C318E89708008475CF /* DDRCoreDataTests.m in Sources */,
+				030376D418E897AF008475CF /* DDRCoreDataTests.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +429,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		030376D218E897AF008475CF /* DDRCoreDataTests.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				030376D318E897AF008475CF /* DDRCoreDataTests.xcdatamodel */,
+			);
+			currentVersion = 030376D318E897AF008475CF /* DDRCoreDataTests.xcdatamodel */;
+			path = DDRCoreDataTests.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 0303769B18E89708008475CF /* Project object */;
 }
