@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-#import "DDRManagedObject.h"
+#import "DDRSyncedManagedObject.h"
 
-@interface DDRPerson : DDRManagedObject
+@interface DDRPerson : DDRSyncedManagedObject
 
-@property (nonatomic, retain) NSString * firstName;
-@property (nonatomic, retain) NSString * lastName;
+@property (nonatomic, copy) NSString * firstName;
+@property (nonatomic, copy) NSString * lastName;
 
 @end

@@ -18,6 +18,8 @@
 		030376D118E89783008475CF /* DDRManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376CF18E89783008475CF /* DDRManagedObject.m */; };
 		030376D418E897AF008475CF /* DDRCoreDataTests.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 030376D218E897AF008475CF /* DDRCoreDataTests.xcdatamodeld */; };
 		030376D718E897E8008475CF /* DDRPerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 030376D618E897E8008475CF /* DDRPerson.m */; };
+		03DDBB1618F2CCA900A663D0 /* DDRSyncedManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDBB1518F2CCA900A663D0 /* DDRSyncedManagedObject.m */; };
+		03DDBB1718F2CCA900A663D0 /* DDRSyncedManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DDBB1518F2CCA900A663D0 /* DDRSyncedManagedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		030376D318E897AF008475CF /* DDRCoreDataTests.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DDRCoreDataTests.xcdatamodel; sourceTree = "<group>"; };
 		030376D518E897E8008475CF /* DDRPerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRPerson.h; sourceTree = "<group>"; };
 		030376D618E897E8008475CF /* DDRPerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRPerson.m; sourceTree = "<group>"; };
+		03DDBB1418F2CCA900A663D0 /* DDRSyncedManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRSyncedManagedObject.h; sourceTree = "<group>"; };
+		03DDBB1518F2CCA900A663D0 /* DDRSyncedManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRSyncedManagedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				030376CD18E89783008475CF /* DDRCoreDataDocument.m */,
 				030376CE18E89783008475CF /* DDRManagedObject.h */,
 				030376CF18E89783008475CF /* DDRManagedObject.m */,
+				03DDBB1418F2CCA900A663D0 /* DDRSyncedManagedObject.h */,
+				03DDBB1518F2CCA900A663D0 /* DDRSyncedManagedObject.m */,
 				030376A918E89708008475CF /* Supporting Files */,
 			);
 			path = DDRCoreData;
@@ -236,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				030376D018E89783008475CF /* DDRCoreDataDocument.m in Sources */,
+				03DDBB1618F2CCA900A663D0 /* DDRSyncedManagedObject.m in Sources */,
 				030376D118E89783008475CF /* DDRManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +254,7 @@
 				030376D718E897E8008475CF /* DDRPerson.m in Sources */,
 				030376C318E89708008475CF /* DDRCoreDataTests.m in Sources */,
 				030376D418E897AF008475CF /* DDRCoreDataTests.xcdatamodeld in Sources */,
+				03DDBB1718F2CCA900A663D0 /* DDRSyncedManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +427,7 @@
 				030376C818E89708008475CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		030376C918E89708008475CF /* Build configuration list for PBXNativeTarget "DDRCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +436,7 @@
 				030376CB18E89708008475CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
