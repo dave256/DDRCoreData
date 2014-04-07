@@ -142,6 +142,18 @@
     XCTAssert(error == nil, @"save error: %@\n%@", [error localizedDescription], [error userInfo]);
 }
 
+- (void)testUndefinedKey
+{
+    NSManagedObjectContext *mainMOC = _doc.mainQueueObjectContext;
+    [self insertDaveReedInManagedObjectContext:mainMOC];
+    NSArray *items = [DDRPerson allInstancesInManagedObjectContext:mainMOC];
+    DDRPerson *p = [items firstObject];
+    // this does crash as expected
+    //[p setValue:@"check" forKey:@"crash"];
+    [p setValue:@"test" forKey:@"ddrSyncIdentifier"];
+
+}
+
 - (void)insertDaveReedInManagedObjectContext:(NSManagedObjectContext*)moc
 {
     DDRPerson *p = [DDRPerson newInstanceInManagedObjectContext:moc];

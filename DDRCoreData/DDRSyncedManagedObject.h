@@ -10,7 +10,4 @@
 
 @interface DDRSyncedManagedObject : DDRManagedObject
 
-@property (nonatomic, copy) NSString *ddrSyncIdentifier;
-
-
 @end
