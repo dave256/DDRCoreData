@@ -41,6 +41,7 @@
             _privateMOC.persistentStoreCoordinator = _persistentStoreCoordinator;
             _mainQueueObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
             _mainQueueObjectContext.parentContext = _privateMOC;
+            _mainQueueObjectContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy;
         }
     }
     return self;
