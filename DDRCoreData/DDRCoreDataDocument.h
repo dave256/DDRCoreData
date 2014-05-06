@@ -19,7 +19,7 @@
 
 - (instancetype)initWithStoreURL:(NSURL*)theURL modelName:(NSString*)modelName options:(NSDictionary*)options;
 
-- (void)saveContext:(BOOL)wait;
+- (void)saveContextWithWait:(BOOL)wait;
 
 - (NSManagedObjectContext*)newChildOfMainQueueObjectContextWithConcurrencyType:(NSManagedObjectContextConcurrencyType)concurrencyType;
 

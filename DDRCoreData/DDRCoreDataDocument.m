@@ -48,7 +48,7 @@
 }
 
 // code from Core Data, Second Edition by Marcus S. Zarra pp. 96-97
-- (void)saveContext:(BOOL)wait
+- (void)saveContextWithWait:(BOOL)wait
 {
     // return if no MOC created yet
     if (!_mainQueueObjectContext) {
